@@ -9,6 +9,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 use function PHPUnit\Framework\assertEquals;
+use function PHPUnit\Framework\assertSame;
 
 class DependencyInjectionTest extends TestCase
 {
