@@ -29,7 +29,8 @@ class ServiceContainerTest extends TestCase
         $foo = app()->make(Foo::class);
         $foo2 = app()->make(Foo::class);
 
-        assertNotSame($foo,$foo2);
+        // assertNotSame($foo,$foo2);
+        assertSame($foo,$foo2);
     }
 
     function testBind() : void {
@@ -84,7 +85,8 @@ class ServiceContainerTest extends TestCase
         $bar2 = app()->make(Bar::class);
 
         assertEquals("Foo and Bar", $bar->bar());
-        assertNotSame($bar, $bar2);
+        assertSame($bar, $bar2);
+        // assertNotSame($bar, $bar2);
         assertSame($foo, $bar->foo);
         assertSame($foo, $foo2);
     }
